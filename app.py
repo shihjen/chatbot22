@@ -26,7 +26,7 @@ def get_llm():
 # define a fucntion to load the pdf files (the data) from directory
 from langchain_community.document_loaders import PyPDFDirectoryLoader
 def load_data():
-    pdf_loader = PyPDFDirectoryLoader('pdf_file')
+    pdf_loader = PyPDFDirectoryLoader('data')
     data = pdf_loader.load()
     return data
 
