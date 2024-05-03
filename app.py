@@ -4,6 +4,8 @@ from dotenv import load_dotenv
 import os
 load_dotenv()
 
+os.environ['HUGGINGFACEHUB_API_TOKEN'] = os.getenv('HUGGINGFACEHUB_API_TOKEN')
+
 # Streamlit UI
 st.title('Test App')
 Userquestion = st.chat_input('Ask me a question')
@@ -13,13 +15,11 @@ if Userquestion:
 
 # define a function to create a llm model
 from langchain_community.llms import HuggingFaceHub
-huggingfacehub_api_token = os.getenv('HUGGINGFACEHUB_API_TOKEN')
 def get_llm():
     hf = HuggingFaceHub(
         repo_id = 'google/gemma-1.1-7b-it',  # google/gemma-1.1-7b-it
         task = 'text-generation',
         model_kwargs = {'temperature':0.1, 'max_length':1000},
-        huggingfacehub_api_token=huggingfacehub_api_token
     )
     return hf
 
