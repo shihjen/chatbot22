@@ -20,6 +20,7 @@ def get_llm():
         repo_id = 'google/gemma-1.1-7b-it',  # google/gemma-1.1-7b-it
         task = 'text-generation',
         model_kwargs = {'temperature':0.1, 'max_length':1000},
+        huggingfacehub_api_token=HUGGINGFACEHUB_API_TOKEN
     )
     return hf
 
