@@ -1,0 +1,17 @@
+pandas
+numpy
+matplotlib
+seaborn
+langchain
+langchain_community
+unstructured
+markdown
+pypdf
+langchain-text-splitters
+sentence_transformers
+faiss-cpu
+python-dotenv
+huggingface-hub
+transformers
+ipykernel
+streamlit
